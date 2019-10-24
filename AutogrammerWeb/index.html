@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物質量・秤量計算器</title>
+    <script type="text/javascript" src="base.js"></script>
+</head>
+<body>
+    <p class="title">mass calculator</p>
+
+    <div class="target_input">
+            <div class="form">
+                target compound name: 
+                <input type="text" id="comp_formula" onblur="calculateMass(this)">
+            </div>
+
+            <div class="output_form">
+                target mass per 1mol: 
+                <span id="mass"></span>
+            </div>
+            <div class="form">
+                target mass(g)
+                <input type="text" id="comp_mass" onblur="showMolbyMass()">
+            </div>
+            <div class="output_form">
+                    target mol: 
+                    <span id="mol"></span>
+            </div>
+    </div>
+
+    
+    <input type="button" value="秤量計算実行" onclick="calculateOthersMass()">
+    <div class="comp_lists">
+        <div class="comp_list">
+            <p>composition 1</p>
+            <input type="text" class="comp_name" placeholder="組成式">
+            <input type="text" class="comp_mol" placeholder="組成比">
+            <p class="calc_mass">mass:</p>
+        </div>
+        <div class="comp_list">
+                <p>composition 2</p>
+                <input type="text" class="comp_name" placeholder="組成式">
+                <input type="text" class="comp_mol" placeholder="組成比">
+                <p class="calc_mass">mass:</p>
+        </div>
+        <div class="comp_list">
+                <p>composition 3</p>
+                <input type="text" class="comp_name" placeholder="組成式">
+                <input type="text" class="comp_mol" placeholder="組成比">
+                <p class="calc_mass">mass:</p>
+        </div>
+        <div class="comp_list">
+                <p>composition 4</p>
+                <input type="text" class="comp_name" placeholder="組成式">
+                <input type="text" class="comp_mol" placeholder="組成比">
+                <p class="calc_mass">mass:</p>
+        </div>
+        <div class="comp_list">
+                <p>composition 5</p>
+                <input type="text" class="comp_name" placeholder="組成式">
+                <input type="text" class="comp_mol" placeholder="組成比">
+                <p class="calc_mass">mass:</p>
+        </div>
+    </div>
+    <input type="button" value="dammy" onclick="dammy()">
+</body>
+</html>
